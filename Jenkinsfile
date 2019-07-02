@@ -8,7 +8,7 @@ pipeline {
         },
         stage('Deploy') {
             steps {
-                timeout(time: .25, unit: 'MINUTES') {
+                timeout(time: 3, unit: 'MINUTES') {
                     retry(5) {
                         sh 'helloworld.py'
                     }
